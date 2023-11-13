@@ -1,0 +1,58 @@
+pretrain:
+  pretrained_weights: False
+  pretrained_weights_path: ./results/2022_09_05__16_42_37/model_epoch_253.pth
+resume:
+  resume: False
+  resume_path: ./results/2022_09_05__16_42_37/model_epoch_253.pth
+fix_seed: True
+result_path: ./results/
+checkpoints_every: 10
+tensorboard_log: True
+
+train_settings:
+  train_path: ../../cifar10/train
+  train_batch_size: 128
+  num_epochs: 151
+  shuffle: True
+  h_input: 32
+  w_input: 32
+  mixed_precision: True
+  device: cuda
+
+valid_settings:
+  valid_path: ../../cifar10/test
+  valid_batch_Size: 128
+  do_every: 1
+  device: cuda
+
+model:
+  model_name: ResNet
+
+optimizer:
+  name: SGD
+  lr: 1e-1
+  sam: True
+  weight_decouple: True
+  weight_decay: 1e-4
+  eps: 1e-8
+  grad_clip_norm: 4.5
+  decay:
+    warmup: 3
+    min_lr: 1e-5
+    gamma: 0.2
+    final_epoch: 130
+
+augmentation:
+  imagenet_normalize: True
+  mixup:
+    mixup: True
+    mixup_param: 1.0
+    mixup_off_epoch_ratio: 0.6
+  rand_aug:
+    rand_aug: True
+    rand_aug_num_ops: 2
+    rand_aug_magnitude: 12
+  others:
+    crop_scale: 0.75
+    jitter_param: 0.2
+    erasing_prob: 0.25

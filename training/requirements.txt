@@ -1,0 +1,14 @@
+adabelief-pytorch
+torchmetrics
+torchsummary
+PyYAML
+matplotlib
+adabelief-pytorch
+tensorboard
+pandas
+thop
+
+--extra-index-url https://download.pytorch.org/whl/cu113
+torch
+torchvision
+torchaudio
