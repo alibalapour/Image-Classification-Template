@@ -1,4 +1,4 @@
-# EvaluationProjectAli
+# Image Classification Template
 
 The project cifar10. This Project is designed as the evaluation project of AI team in SD Studio.
 
