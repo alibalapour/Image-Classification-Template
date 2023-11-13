@@ -1,6 +1,6 @@
 # Image Classification Template
 
-The project cifar10. This Project is designed as the evaluation project of AI team in SD Studio.
+The project contains a simple resnet model with different options for data augmentations, optimizers, loss functions, and etc. The simple resnet model implemented in this repository was aimed to trained and tested on cifar10. The model got 96.1% accuracy without any pre-training.
 
 
 ## To Do
